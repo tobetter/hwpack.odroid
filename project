@@ -1,0 +1,11 @@
+# config/project - OEM Services: project and hook options.
+
+# IBS_BUILDTOOL - Set build tool to use to build project (mic or lh).
+IBS_BUILDTOOL="hwpack"
+
+# IBS_BUILDTOOL_VERSION - Set build tool version to use.
+#IBS_BUILDTOOL_VERSION="2.0~a10.1-1ubuntu1~linaro*"
+
+# BCCTREPORT - Enable or disable the bcct report for project builds (enabled or
+#  disabled).
+BCCTREPORT="disable"

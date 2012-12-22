@@ -1,0 +1,41 @@
+format: '3.0'
+name: odroidx
+architectures: armhf
+origin: Hardkernel
+maintainer: Dongjin Kim <tobetter@gmail.com>
+support: supported
+bootloaders:
+  u_boot:
+    package: u-boot-odroid
+    file: boot/u-boot.bin
+    in_boot_part: false
+    dd: 49
+    env_dd: true
+boot_script: boot.scr
+kernel_addr: '0x40007000'
+kernel_file: boot/vmlinuz-*-odroidx
+initrd_addr: '0x42000000'
+initrd_file: boot/initrd.img-*-odroidx
+load_addr: '0x40008000'
+serial_tty: ttySAC1
+partition_layout: reserved_bootfs_rootfs
+mmc_id: 0:2
+samsung_bl1_start: 1
+samsung_bl1_len: 32
+samsung_env_len: 32
+samsung_bl2_len: 1024
+assume_installed:
+  - linaro-headless
+  - bluez
+extra_serial_options:
+  - console=tty0
+  - console=ttySAC1,115200n8
+packages:
+  - linux-image-3.7.0-1-linaro-odroidx
+  - linux-headers-3.7.0-1-linaro-odroidx
+  - u-boot-odroid
+  - uboot-mkimage
+sources:
+  tobetter: http://ppa.launchpad.net/tobetter/ppa/ubuntu quantal main
+  linaro: http://ppa.launchpad.net/linaro-maintainers/overlay/ubuntu precise main
+  ubuntu: http://ports.ubuntu.com/ubuntu-ports quantal main universe
