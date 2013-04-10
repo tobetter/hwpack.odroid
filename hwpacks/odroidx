@@ -11,6 +11,7 @@ bootloaders:
     in_boot_part: false
     dd: 49
     env_dd: true
+    extra_boot_options: 'mem=1023M init=/sbin/init'
 boot_script: boot.scr
 kernel_addr: '0x40007000'
 kernel_file: boot/vmlinuz-*-odroidx
