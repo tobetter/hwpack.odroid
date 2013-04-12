@@ -8,7 +8,7 @@ bootloaders:
   u_boot:
     package: u-boot-odroid
     file: boot/u-boot.bin
-    in_boot_part: false
+    in_boot_part: true
     dd: 49
     env_dd: true
     extra_boot_options: 'mem=1023M init=/sbin/init'
@@ -32,8 +32,8 @@ extra_serial_options:
   - console=tty0
   - console=ttySAC1,115200n8
 packages:
-  - linux-image-3.7.0-1-linaro-odroidx
-  - linux-headers-3.7.0-1-linaro-odroidx
+  - linux-image-3.8.6.0-1-linaro-odroidx
+  - linux-headers-3.8.6.0-1-linaro-odroidx
   - u-boot-odroid
   - uboot-mkimage
 sources:
