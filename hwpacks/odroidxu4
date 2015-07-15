@@ -1,0 +1,47 @@
+format: '3.0'
+name: odroid-xu4
+architectures: armhf
+origin: Hardkernel Co,.Ltd
+maintainer: Dongjin Kim <tobetter@gmail.com>
+support: supported
+bootloaders:
+  u_boot:
+    package: u-boot-odroidxu4
+    file: boot/u-boot.bin.hardkernel
+    in_boot_part: true
+    dd: 49
+    env_dd: false
+    extra_boot_options: 'mem=1023M init=/sbin/init'
+
+kernel_addr: '0x40008000'
+kernel_file: boot/vmlinuz-*
+initrd_addr: '0x42000000'
+initrd_file: boot/uInitrd-*
+dtb_file: boot/exynos5422-odroidxu4-*.dtb
+dtb_addr: '0x44000000'
+load_addr: '0x40008000'
+
+serial_tty: ttySAC2
+mmc_id: 0:1
+
+partition_layout: reserved_bootfs_rootfs
+samsung_bl1_start: 1
+samsung_bl1_len: 30
+samsung_bl2_start: 31
+samsung_bl2_len: 32
+samsung_env_start: 1231
+samsung_env_len: 32
+
+assume_installed:
+
+extra_serial_options:
+  - console=tty1
+  - console=ttySAC2,115200n8
+
+packages:
+  - odroid-firstboot
+  - odroid-boothelper
+  - linux-image-4.2.0-rc1-odroidxu4
+
+sources:
+  tobetter: http://ppa.launchpad.net/tobetter/ppa/ubuntu trusty main
