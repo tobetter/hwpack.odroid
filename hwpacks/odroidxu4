@@ -41,7 +41,7 @@ extra_serial_options:
 packages:
   - odroid-firstboot
   - odroid-boothelper
-  - linux-image-4.2.0-rc1-odroidxu4
+  - linux-image-4.6.0-odroidxu4
 
 sources:
   tobetter: http://ppa.launchpad.net/tobetter/ppa/ubuntu trusty main
