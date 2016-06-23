@@ -17,7 +17,7 @@ kernel_addr: '0x40008000'
 kernel_file: boot/vmlinuz-*
 initrd_addr: '0x42000000'
 initrd_file: boot/uInitrd-*
-dtb_files: boot/meson-gxbb-odroidc2.dtb
+dtb_file: boot/meson-gxbb-odroidc2.dtb
 dtb_addr: '0x44000000'
 load_addr: '0x40008000'
 
