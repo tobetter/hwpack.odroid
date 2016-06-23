@@ -25,6 +25,9 @@ samsung_bl1_start: 1
 samsung_bl1_len: 32
 samsung_env_len: 32
 samsung_bl2_len: 1024
+
+boot_min_size: 64
+
 assume_installed:
   - linaro-headless
   - bluez

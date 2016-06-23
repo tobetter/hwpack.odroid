@@ -32,6 +32,8 @@ samsung_bl2_len: 32
 samsung_env_start: 1231
 samsung_env_len: 32
 
+boot_min_size: 64
+
 assume_installed:
 
 extra_serial_options:
