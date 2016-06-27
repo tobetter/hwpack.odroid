@@ -41,6 +41,7 @@ extra_serial_options:
   - console=ttySAC2,115200n8
 
 packages:
+  - odroid-firstboot
   - odroid-boothelper
   - linux-image-4.6.0-odroidxu4
 
