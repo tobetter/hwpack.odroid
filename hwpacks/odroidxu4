@@ -1,5 +1,5 @@
 format: '3.0'
-name: odroid-xu4
+name: odroidxu4
 architectures: armhf
 origin: Hardkernel Co,.Ltd
 maintainer: Dongjin Kim <tobetter@gmail.com>
